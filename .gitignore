@@ -1,2 +1,6 @@
 /.idea
 DizzyFarm.iml
+src/account_creator/created_accs.txt
+src/account_creator/settings.ini
+src/scripts/Timer.class
+src/srcipts/TinMiner.class

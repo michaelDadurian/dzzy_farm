@@ -15,6 +15,7 @@ import scripts.FirstSteps.Nodes.FCombatArea.CombatArea;
 import scripts.FirstSteps.Nodes.GAccountGuide.AccountGuide;
 import scripts.FirstSteps.Nodes.HBrotherBrace.BrotherBrace;
 import scripts.FirstSteps.Nodes.IWizardHouse.WizardHouse;
+import scripts.FirstSteps.Nodes.JTradeMule.TradeMule;
 import scripts.FirstSteps.Nodes.LoginUser;
 import scripts.FirstSteps.Nodes.BSurvivalExpert.SurvivalExpert;
 import scripts.FirstSteps.Nodes.Traversal;
@@ -47,8 +48,10 @@ public class FirstSteps extends Script {
             }
         });
 
+        General.println("RUN GAMESTATE: " + gameState);
         Collections.addAll(
                 Nodes,
+                /*
                 new LoginUser(),
                 new Traversal(),
                 new CreateCharacter(),
@@ -60,13 +63,17 @@ public class FirstSteps extends Script {
                 new CombatArea(),
                 new AccountGuide(),
                 new BrotherBrace(),
-                new WizardHouse()
+                new WizardHouse(),
+
+                 */
+                new Traversal(),
+                new TradeMule()
         );
 
         while (true) {
             loop();
 
-            if (gameState == 1000) {
+            if (gameState == 20000) {
                 General.println("FINISHED! LOGGING YOU OUT NOW :)");
                 Login.logout();
                 break;
@@ -75,8 +82,21 @@ public class FirstSteps extends Script {
     }
 
     private void loop() {
+
         for (final Node node: Nodes) {
-            gameState = Game.getSetting(281);
+            General.println("CHECKIGN NODE: ");
+            node.printStatus();
+
+            /* hard code as 1000 for now to test out TradeMule node.
+                Constants.MULE_STATES = {1000}
+
+                Traversal to mule initiates at game state 1000
+
+                try incrementing gameState manually for testing
+             */
+            gameState = Game.getSetting(281); //need documentation
+            gameState = 1000; //seems to be when you get off tutorial island?
+            General.println("GAME STATE: " + gameState);
             if (node.validate()) {
                 node.printStatus();
                 node.execute();

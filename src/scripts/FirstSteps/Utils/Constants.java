@@ -5,6 +5,7 @@ import org.tribot.api2007.types.RSTile;
 
 public class Constants {
     // Retrieved from https://github.com/zperkins11/Tribot/blob/master/scripts/tutorialIsland/data/Finals.java
+    // TUTORIAL ISLAND RATPIT AREA
     public static final RSArea RATPIT = new RSArea(new RSTile[] {
             new RSTile(3094, 9517, 0),
             new RSTile(3094, 9519, 0),
@@ -33,6 +34,8 @@ public class Constants {
             new RSTile(3105, 9510, 0),
             new RSTile(3102, 9510, 0)
     });
+
+    /* TUTORIAL ISLAND SITES */
     public static final RSArea SURVIVAL_AREA = new RSArea(new RSTile(3101, 3097, 0), new RSTile(3104, 3094, 0));
     public static final RSArea KITCHEN_AREA = new RSArea(new RSTile(3076, 3083, 0), new RSTile(3074, 3086, 0));
     public static final RSArea QUEST_GUIDE_HOUSE = new RSArea(new RSTile(3089, 3119, 0), new RSTile(3080, 3125, 0));
@@ -43,8 +46,9 @@ public class Constants {
     public static final RSArea PRIEST_GUIDE_HOUSE = new RSArea(new RSTile(3120, 3110, 0), new RSTile(3128, 3103, 0));
     public static final RSArea WIZARD_HOUSE = new RSArea(new RSTile(3141, 3084, 0), new RSTile(3143, 3090, 0));
 
-    // TRAVERSAL STATES
-    public static final int TRAVERSAL_STATES[] = {10, 120, 130, 170, 250, 360, 500, 540, 610};
+    /* VALUES OF GAMESTATE THAT TRIGGER A TRAVERSAL */
+    public static final int TRAVERSAL_STATES[] = {10, 120, 130, 170, 250, 360, 500, 540, 610, 1000};
+    /* TUTORIAL ISLAND TRAVERSAL STATES */
     public static final int WALK_TO_SURVIVAL_AREA = 10;
     public static final int WALK_TO_KITCHEN_AREA = 120;
     public static final int WALK_TO_KITCHEN_AREA2 = 130;
@@ -54,44 +58,45 @@ public class Constants {
     public static final int WALK_TO_ACCOUNT_GUIDE_AREA = 500;
     public static final int WALK_TO_BROTHER_BRACE_AREA = 540;
     public static final int WALK_TO_WIZARD_HOUSE_AREA = 610;
+    /* POST-TUTORIAL ISLAND TRAVERSAL STATES */
+    public static final int WALK_TO_MULE_AREA = 1000;
 
+    /* TUTORIAL ISLAND AREA CONSTANTS */
     // GIELINOR GUIDE AREA CONSTANTS
     public static final int GIELINOR_GUIDE = 3308;
     public static final int GIELINOR_GUIDE_GAME_STATES[] =  {2,3,7};
-
     // SURVIVAL AREA CONSTANTS
     public static final int SURVIVAL_EXPERT = 8503;
     public static final int SURVIVAL_AREA_STATES[] = {20, 30, 40, 50,60, 70, 80, 90};
     public static final int FISHING_SPOT = 3317;
-
     // MASTER CHEF CONSTANTS
     public static final int MASTER_CHEF = 3305;
     public static final int MASTER_CHEF_STATES[] = {140, 150, 160};
-
     // QUEST GUIDE CONSTANTS
     public static final int QUEST_GUIDE = 3312;
     public static final int QUEST_GUIDE_STATES[] = {200, 220, 230, 240};
-
     // MINING INSTRUCTORS CONSTANTS
     public static final int MINING_INSTRUCTOR = 3311;
     public static final int MINING_INSTRUCTOR_STATES[] = {260, 300, 310, 320, 330, 340, 350};
     public static final int COPPER_ROCKS = 10079;
     public static final int TIN_ROCKS = 10080;
-
     // COMBAT AREA CONSTANTS
     public static final int COMBAT_INSTRUCTOR = 3307;
     public static final int COMBAT_AREA_STATES[] = {370, 390, 400, 405, 410, 420, 430, 440, 450, 460, 470, 480, 490};
-
     // ACCOUNT AREA CONSTANTS
     public static final int BANKER = 3318;
     public static final int ACCOUNT_GUIDE = 3310;
     public static final int ACCOUNT_AREA_STATES[] = {510, 520, 525, 530, 531, 532};
-
     // BROTHER BRACE AREA CONSTANTS
     public static final int BROTHER_BRACE = 3319;
     public static final int BROTHER_BRACE_STATES[] = {550, 560, 570, 580, 600};
-
     // WIZARD AREA CONSTANTS
     public static final int MAGIC_INSTRUCTOR = 3309;
     public static final int WIZARD_HOUSE_STATES[] = {620, 630, 640, 650, 670};
+
+    /* POST TUTORIAL CONSTANTS */
+    // MULE AREA CONSTANTS
+    public static final String MULE_USER = "68cool2335"; //make configurable
+    public static int MULE_LOCATION[] = {3221, 3242, 0};
+    public static final int MULE_STATES[] = {1000}; //game state to trigger TradeMule
 }
