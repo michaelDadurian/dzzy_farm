@@ -11,9 +11,8 @@ import scripts.API.ObjectHandler;
 import scripts.API.TabsHandler;
 import scripts.FirstSteps.API.Node;
 import scripts.FirstSteps.FirstSteps;
-import scripts.FirstSteps.Utils.Constants;
 import scripts.dax_api.api_lib.DaxWalker;
-
+import scripts.FirstSteps.Utils.Constants;
 import java.util.Arrays;
 
 public class AccountGuide extends Node {

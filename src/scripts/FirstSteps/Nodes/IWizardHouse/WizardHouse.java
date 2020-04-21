@@ -11,7 +11,6 @@ import scripts.API.TabsHandler;
 import scripts.FirstSteps.API.Node;
 import scripts.FirstSteps.FirstSteps;
 import scripts.FirstSteps.Utils.Constants;
-
 import java.util.Arrays;
 
 public class WizardHouse extends Node {

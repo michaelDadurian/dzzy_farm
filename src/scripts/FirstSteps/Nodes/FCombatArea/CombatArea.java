@@ -6,13 +6,12 @@ import org.tribot.api2007.types.RSInterface;
 import org.tribot.api2007.types.RSItem;
 import org.tribot.api2007.types.RSNPC;
 import scripts.API.*;
-import scripts.FirstSteps.API.Node;
 import scripts.FirstSteps.FirstSteps;
-import scripts.FirstSteps.Utils.Constants;
 import scripts.dax_api.api_lib.DaxWalker;
 
 import java.util.Arrays;
-
+import scripts.FirstSteps.Utils.Constants;
+import scripts.FirstSteps.API.Node;
 public class CombatArea extends Node {
     public void printStatus(){
         General.println("AT THE COMBAT AREA STAGE");

@@ -84,7 +84,7 @@ def use_tribot(charname, charpass, proxy=None):
                        f'--username "{tribot_username}" --password "{tribot_password}" '
                        f'--charusername "{charname}" --charpassword "{charpass}" '
                        f'--script "{tribot_script}" --scriptargs "{script_args} " '
-                       f'--charworld "433" '
+                       f'--charworld "379" '
                        f'--proxyhost "{proxy_host}" '
                        f'--proxyport "{proxy_port}" '
                        f'--proxyusername "{proxy_username}" '
@@ -94,7 +94,7 @@ def use_tribot(charname, charpass, proxy=None):
                        f'--username "{tribot_username}" --password "{tribot_password}" '
                        f'--charusername "{charname}" --charpassword "{charpass}" '
                        f'--script "{tribot_script}" --scriptargs "{script_args} " '
-                       f'--charworld "433" '
+                       f'--charworld "379" '
                        f'--proxyhost "{proxy_host}" '
                        f'--proxyport "{proxy_port}" ')
     else: # Not using proxies
@@ -102,7 +102,7 @@ def use_tribot(charname, charpass, proxy=None):
                    f'--username "{tribot_username}" --password "{tribot_password}" '
                    f'--charusername "{charname}" --charpassword "{charpass}" '
                    f'--script "{tribot_script}" --scriptargs "{script_args} " '
-                   f'--charworld "433" ')
+                   f'--charworld "379" ')
 
     print("")
     print("\nLoading tribot with the following settings...")

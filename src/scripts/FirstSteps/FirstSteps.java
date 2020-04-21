@@ -8,6 +8,7 @@ import org.tribot.script.ScriptManifest;
 import scripts.FirstSteps.API.Node;
 import scripts.FirstSteps.Nodes.AGielinorGuide.CreateCharacter;
 import scripts.FirstSteps.Nodes.AGielinorGuide.TalkToGielinorGuide;
+import scripts.FirstSteps.Nodes.BSurvivalExpert.SurvivalExpert;
 import scripts.FirstSteps.Nodes.CMasterChef.MasterChef;
 import scripts.FirstSteps.Nodes.DQuestGuide.QuestGuide;
 import scripts.FirstSteps.Nodes.EMiningInstructor.MiningInstructor;
@@ -15,9 +16,8 @@ import scripts.FirstSteps.Nodes.FCombatArea.CombatArea;
 import scripts.FirstSteps.Nodes.GAccountGuide.AccountGuide;
 import scripts.FirstSteps.Nodes.HBrotherBrace.BrotherBrace;
 import scripts.FirstSteps.Nodes.IWizardHouse.WizardHouse;
-import scripts.FirstSteps.Nodes.JTradeMule.TradeMule;
+import scripts.FirstSteps.Nodes.XTradeDistributor.TradeDistributor;
 import scripts.FirstSteps.Nodes.LoginUser;
-import scripts.FirstSteps.Nodes.BSurvivalExpert.SurvivalExpert;
 import scripts.FirstSteps.Nodes.Traversal;
 import scripts.dax_api.api_lib.DaxWalker;
 import scripts.dax_api.api_lib.models.DaxCredentials;
@@ -29,7 +29,7 @@ import java.util.Collections;
 @ScriptManifest(
         authors = {"dzzl"},
         category = "Quests",
-        name = "First Steps",
+        name = "First Steps V0.1",
         gameMode = 1,
         description = "Extension of Tutorial Island Bot by ThatWebDevKid. Trades a mule for a bond after account creation.",
         version = (1.1)
@@ -51,10 +51,9 @@ public class FirstSteps extends Script {
         General.println("RUN GAMESTATE: " + gameState);
         Collections.addAll(
                 Nodes,
-                /*
                 new LoginUser(),
-                new Traversal(),
                 new CreateCharacter(),
+                new Traversal(),
                 new TalkToGielinorGuide(),
                 new SurvivalExpert(),
                 new MasterChef(),
@@ -64,15 +63,17 @@ public class FirstSteps extends Script {
                 new AccountGuide(),
                 new BrotherBrace(),
                 new WizardHouse(),
-
-                 */
                 new Traversal(),
-                new TradeMule()
+                new TradeDistributor() //Get bond + gp, activate bond
+                //Switch to P2P, traverse to GE, purchase items to make money
+                //Begin money making
+
         );
+
+        //gameState = 1000;
 
         while (true) {
             loop();
-
             if (gameState == 20000) {
                 General.println("FINISHED! LOGGING YOU OUT NOW :)");
                 Login.logout();
@@ -82,6 +83,7 @@ public class FirstSteps extends Script {
     }
 
     private void loop() {
+        //gameState = 1000; //init at 1000 and see where it goes
 
         for (final Node node: Nodes) {
             General.println("CHECKIGN NODE: ");
@@ -95,7 +97,7 @@ public class FirstSteps extends Script {
                 try incrementing gameState manually for testing
              */
             gameState = Game.getSetting(281); //need documentation
-            gameState = 1000; //seems to be when you get off tutorial island?
+             //seems to be when you get off tutorial island?
             General.println("GAME STATE: " + gameState);
             if (node.validate()) {
                 node.printStatus();

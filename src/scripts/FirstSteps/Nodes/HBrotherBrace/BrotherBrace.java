@@ -10,11 +10,11 @@ import scripts.API.InterfaceHandler;
 import scripts.API.NPCHandler;
 import scripts.API.TabsHandler;
 import scripts.FirstSteps.API.Node;
-import scripts.FirstSteps.FirstSteps;
-import scripts.FirstSteps.Utils.Constants;
 
 import java.util.Arrays;
 
+import scripts.FirstSteps.FirstSteps;
+import scripts.FirstSteps.Utils.Constants;
 public class BrotherBrace extends Node {
     public void printStatus(){
         General.println("AT THE BROTHER BRACE AREA STAGE");

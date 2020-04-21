@@ -7,11 +7,11 @@ import scripts.API.InterfaceHandler;
 import scripts.API.NPCHandler;
 import scripts.API.ObjectHandler;
 import scripts.FirstSteps.API.Node;
-import scripts.FirstSteps.FirstSteps;
-import scripts.FirstSteps.Utils.Constants;
 
 import java.util.Arrays;
 
+import scripts.FirstSteps.FirstSteps;
+import scripts.FirstSteps.Utils.Constants;
 public class MiningInstructor extends Node {
     public void printStatus(){
         General.println("AT THE MINING AREA STAGE");

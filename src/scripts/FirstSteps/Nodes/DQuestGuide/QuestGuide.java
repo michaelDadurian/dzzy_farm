@@ -6,13 +6,13 @@ import org.tribot.api2007.Interfaces;
 import org.tribot.api2007.NPCs;
 import org.tribot.api2007.types.RSInterface;
 import org.tribot.api2007.types.RSNPC;
-import scripts.API.*;
 import scripts.FirstSteps.API.Node;
-import scripts.FirstSteps.FirstSteps;
-import scripts.FirstSteps.Utils.Constants;
+import scripts.API.*;
 
 import java.util.Arrays;
 
+import scripts.FirstSteps.FirstSteps;
+import scripts.FirstSteps.Utils.Constants;
 public class QuestGuide extends Node {
     public void printStatus(){
         General.println("AT THE QUEST AREA STAGE");

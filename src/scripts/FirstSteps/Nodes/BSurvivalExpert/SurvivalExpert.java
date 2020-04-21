@@ -3,14 +3,13 @@ package scripts.FirstSteps.Nodes.BSurvivalExpert;
 import org.tribot.api.General;
 import org.tribot.api2007.*;
 import org.tribot.api2007.types.*;
-import scripts.API.*;
 import scripts.FirstSteps.API.Node;
+import scripts.API.*;
 import scripts.FirstSteps.FirstSteps;
-import scripts.FirstSteps.Utils.Constants;
 import scripts.dax_api.api_lib.DaxWalker;
 
 import java.util.Arrays;
-
+import scripts.FirstSteps.Utils.Constants;
 public class SurvivalExpert extends Node {
     public void printStatus(){
         General.println("AT SURVIVAL EXPERT STAGE");

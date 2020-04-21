@@ -96,7 +96,14 @@ public class Constants {
 
     /* POST TUTORIAL CONSTANTS */
     // MULE AREA CONSTANTS
-    public static final String MULE_USER = "68cool2335"; //make configurable
-    public static int MULE_LOCATION[] = {3221, 3242, 0};
-    public static final int MULE_STATES[] = {1000}; //game state to trigger TradeMule
+    public static final String DISTRIBUTOR_NAME = "68cool2335"; //make configurable
+    public static int DISTRIBUTOR_LOCATION[] = {3221, 3242, 0};
+    public static final int DISTRIBUTOR_STATES[] = {1000, 1010, 1020, 1100}; //game state to trigger TradeMule
+
+    //ITEM CONSTANTS
+    public static final int BOND_ID = 13190;
+    public static final int GOLD_ID = 995;
+    public static final int BREAD_ID = 2309;
+    public static final int SHORTBOW_ID = 841;
+    public static final int NUM_UNIQUE_ITEMS = 2;
 }

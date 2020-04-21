@@ -1,15 +1,13 @@
 package scripts.FirstSteps.Nodes;
 
-import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
 import org.tribot.api.General;
 import org.tribot.api2007.types.RSTile;
 import scripts.FirstSteps.API.Node;
 import scripts.FirstSteps.FirstSteps;
-import scripts.FirstSteps.Utils.Constants;
 import scripts.dax_api.api_lib.DaxWalker;
 
 import java.util.Arrays;
-
+import scripts.FirstSteps.Utils.Constants;
 public class Traversal extends Node {
     public void printStatus(){
         General.println("WALKING TO THE NEXT STAGE");
@@ -58,7 +56,7 @@ public class Traversal extends Node {
                 break;
             case Constants.WALK_TO_MULE_AREA:
                 General.println("WALKING TO MULE");
-                DaxWalker.walkTo(new RSTile(Constants.MULE_LOCATION[0], Constants.MULE_LOCATION[1], Constants.MULE_LOCATION[2]));
+                DaxWalker.walkTo(new RSTile(Constants.DISTRIBUTOR_LOCATION[0], Constants.DISTRIBUTOR_LOCATION[1], Constants.DISTRIBUTOR_LOCATION[2]));
         }
 
         General.sleep(7000);
