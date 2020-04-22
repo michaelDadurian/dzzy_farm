@@ -96,14 +96,20 @@ public class Constants {
 
     /* POST TUTORIAL CONSTANTS */
     // MULE AREA CONSTANTS
-    public static final String DISTRIBUTOR_NAME = "68cool2335"; //make configurable
-    public static int DISTRIBUTOR_LOCATION[] = {3221, 3242, 0};
-    public static final int DISTRIBUTOR_STATES[] = {1000, 1010, 1020, 1100}; //game state to trigger TradeMule
+    public static final String DISTRIBUTOR_NAME = "RetMounds13"; //make configurable
+    public static int DISTRIBUTOR_LOCATION[] = {3181, 3144, 0};
+    //public static final RSArea DISTRIBUTOR_AREA = new RSArea(new RSTile [] { new RSTile(3180, 3143, 0),new RSTile(3186, 3142, 0),new RSTile(3186, 3140, 0),new RSTile(3180, 3141, 0) });
+    public static final RSArea DISTRIBUTOR_AREA = new RSArea(new RSTile [] { new RSTile(3179, 3145, 0),new RSTile(3183, 3146, 0),new RSTile(3183, 3143, 0),new RSTile(3179, 3143, 0) });
+
+    public static final int TRADE_DISTRIBUTOR_STATES[] = {1010, 1020, 1100}; //game state to trigger TradeMule
 
     //ITEM CONSTANTS
-    public static final int BOND_ID = 13190;
+    public static final int BOND_ID = 13192;
     public static final int GOLD_ID = 995;
     public static final int BREAD_ID = 2309;
     public static final int SHORTBOW_ID = 841;
     public static final int NUM_UNIQUE_ITEMS = 2;
+
+    public static final RSArea LUMBRIDGE_CASTLE = new RSArea(new RSTile [] { new RSTile(3218, 3209, 0),new RSTile(3224, 3209, 0),new RSTile(3226, 3225, 0),new RSTile(3219, 3226, 0) });
+
 }

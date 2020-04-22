@@ -5,6 +5,7 @@ import org.tribot.api2007.Login;
 import org.tribot.script.Script;
 import org.tribot.script.ScriptManifest;
 
+import org.tribot.script.interfaces.MessageListening07;
 import scripts.FirstSteps.API.Node;
 import scripts.FirstSteps.Nodes.AGielinorGuide.CreateCharacter;
 import scripts.FirstSteps.Nodes.AGielinorGuide.TalkToGielinorGuide;
@@ -38,6 +39,8 @@ import java.util.Collections;
 public class FirstSteps extends Script {
     public static ArrayList<Node> Nodes = new ArrayList<>();
     public static int gameState = Game.getSetting(281);
+    //public static boolean tutorialIslandComplete = false;
+    //public static int gameState = 1;
 
     @Override
     public void run() {
@@ -51,6 +54,7 @@ public class FirstSteps extends Script {
         General.println("RUN GAMESTATE: " + gameState);
         Collections.addAll(
                 Nodes,
+                /*
                 new LoginUser(),
                 new CreateCharacter(),
                 new Traversal(),
@@ -63,11 +67,12 @@ public class FirstSteps extends Script {
                 new AccountGuide(),
                 new BrotherBrace(),
                 new WizardHouse(),
+
+                 */
                 new Traversal(),
                 new TradeDistributor() //Get bond + gp, activate bond
                 //Switch to P2P, traverse to GE, purchase items to make money
                 //Begin money making
-
         );
 
         //gameState = 1000;

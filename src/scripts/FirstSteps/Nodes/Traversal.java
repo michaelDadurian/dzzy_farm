@@ -56,7 +56,9 @@ public class Traversal extends Node {
                 break;
             case Constants.WALK_TO_MULE_AREA:
                 General.println("WALKING TO MULE");
+                //DaxWalker.walkTo(Constants.DISTRIBUTOR_AREA.getRandomTile());
                 DaxWalker.walkTo(new RSTile(Constants.DISTRIBUTOR_LOCATION[0], Constants.DISTRIBUTOR_LOCATION[1], Constants.DISTRIBUTOR_LOCATION[2]));
+                break;
         }
 
         General.sleep(7000);
